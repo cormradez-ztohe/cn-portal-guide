@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再访 · 足球竞猜说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f6f2eb;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2b2b2b;
+            padding: 2rem 1.2rem;
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .container {
+            background: #fcfaf7;
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e7dfd4;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border-left: 6px solid #b5a48b;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #3f3a33;
+        }
+
+        .subhead {
+            color: #7d7468;
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding-left: 1.8rem;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed #ddd6cb;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            margin: 1.2rem 0;
+            text-indent: 2em;
+        }
+
+        p.no-indent {
+            text-indent: 0;
+        }
+
+        .highlight-box {
+            background: #efeade;
+            border-left: 5px solid #bfaa8f;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-style: normal;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .highlight-box p {
+            text-indent: 0;
+            margin: 0.4rem 0;
+        }
+
+        .highlight-box strong {
+            color: #5a4d3b;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .feature-item {
+            background: #f6f1ea;
+            flex: 1 1 180px;
+            padding: 1.2rem 1rem;
+            border-radius: 14px;
+            border: 1px solid #e5dbcf;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .feature-item h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #4d4236;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dotted #d6cbbe;
+            padding-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            text-indent: 0;
+            font-size: 0.9rem;
+            margin: 0.3rem 0;
+            color: #4f4a43;
+        }
+
+        .suggestion-card {
+            background: #f6f0e7;
+            padding: 1.7rem 2rem;
+            border-radius: 24px 8px 24px 8px;
+            margin: 2rem 0;
+            border: 1px solid #ddd2c2;
+        }
+
+        .suggestion-card p {
+            text-indent: 0;
+            margin: 0.5rem 0;
+        }
+
+        .suggestion-card .label {
+            font-weight: 500;
+            color: #6b5d4b;
+            letter-spacing: 0.03em;
+            display: inline-block;
+            margin-right: 0.3rem;
+        }
+
+        .faq-snip {
+            margin: 2.5rem 0 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .faq-snip details {
+            margin: 1rem 0;
+            border-bottom: 1px solid #e7ded3;
+            padding-bottom: 0.8rem;
+        }
+
+        .faq-snip summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #4d4236;
+            padding: 0.3rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-snip summary::before {
+            content: "▸";
+            margin-right: 0.6rem;
+            color: #b29f87;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .faq-snip details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-snip details p {
+            text-indent: 0;
+            margin: 0.6rem 0 0.2rem 1.6rem;
+            color: #5c554b;
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: #6f5e48;
+            text-decoration: none;
+            border-bottom: 1px dotted #c7b9a6;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #3f342a;
+            border-bottom-color: #8f7a62;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e8dfd3;
+            font-size: 0.85rem;
+            color: #8b8174;
+            text-align: center;
+            text-indent: 0;
+        }
+
+        @media (max-width: 540px) {
+            body { padding: 1rem 0.8rem; }
+            .container { padding: 1.8rem 1.2rem; }
+            h1 { font-size: 1.6rem; padding-left: 0.8rem; }
+            .subhead { padding-left: 1rem; }
+            .highlight-box { padding: 1rem 1.2rem; }
+            .feature-item { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>再次遇见 · 足球竞猜</h1>
+    <div class="subhead">一份温和的说明，写给回访与驻足的你</div>
+
+    <p>
+        如果你曾经打开过这个页面，或是在某个时刻把它留在了收藏夹的一角，那么这一次重逢或许值得一次更从容的浏览。<a href="https://cn-portal-guessscore.com">足球竞猜</a>所关注的，从来不是一次性的热闹，而是长期、克制的参与节奏。我们希望每一位再次访问的朋友，都能带着之前积累的观察，继续自己的判断练习。
+    </p>
+
+    <div class="highlight-box">
+        <p><strong>📌 关于再次访问的几句话</strong></p>
+        <p>收藏这个页面，不是为了催促你每天回来，而是为了在你想要重新梳理思路时，能迅速回到熟悉的地方。页面内容会保持一贯的调性，不会突然改变规则或风格。你可以把这里当作一个安静的参考点——它就在收藏夹里，不急不躁。</p>
+    </div>
+
+    <div class="feature-list">
+        <div class="feature-item">
+            <h3>持续关注的价值</h3>
+            <p>信息更新不频繁，但每次都有实质调整。适合隔一段时间回来看看，对比自己的判断是否与趋势吻合。</p>
+        </div>
+        <div class="feature-item">
+            <h3>轻量，不打扰</h3>
+            <p>没有推送弹窗，没有强制注册。页面结构几乎不变，减少重新适应的成本，把注意力留给内容本身。</p>
+        </div>
+        <div class="feature-item">
+            <h3>适合回顾与笔记</h3>
+            <p>许多朋友习惯在第二次、第三次访问时，把自己之前的想法写在一旁对照。这种安静的复盘，本身就是一种收获。</p>
+        </div>
+    </div>
+
+    <div class="suggestion-card">
+        <p><span class="label">💡 使用建议</span> 如果你是在一周或更久之后再次打开这个页面，不妨先快速浏览一下整体结构是否有细微调整。然后带着之前的问题或兴趣点，重新审视核心内容。不必追求每次都看完所有信息——找到自己关注的一两个方向，慢慢深入，反倒更有效。</p>
+        <p style="margin-top:0.8rem;"><span class="label">📎 关于收藏</span> 浏览器收藏夹里的链接不会失效，页面地址长期有效。你可以放心保存，甚至为它单独建一个文件夹，把相关的思考笔记放在附近。</p>
+    </div>
+
+    <div class="faq-snip">
+        <details>
+            <summary>FAQ：这个页面会频繁改变吗？</summary>
+            <p>不会。我们更倾向于保持稳定的阅读体验，每次调整都经过考量。如果你隔几周回来，可能发现一些段落或数据有更新，但整体框架和语气是一致的。</p>
+        </details>
+        <details>
+            <summary>需要注册或登录才能使用吗？</summary>
+            <p>不需要。页面完全开放，无需任何账号。你可以直接浏览、思考、离开，下次再来仍然一样。</p>
+        </details>
+        <details>
+            <summary>我该如何向朋友介绍这个页面？</summary>
+            <p>你可以简单说：“有一个关于<a href="https://cn-portal-guessscore.com">足球竞猜</a>的页面，风格很安静，适合自己慢慢看。” 不必夸大，真实描述就好。</p>
+        </details>
+    </div>
+
+    <p class="no-indent" style="margin-top:1.8rem;">
+        最后，如果你已经读到这一段，也许意味着你对这个页面抱有一份认真的好奇。谢谢你的耐心。<a href="https://cn-portal-guessscore.com">足球竞猜</a>不是什么声势浩大的平台，它更像一本可以反复翻阅的笔记——每次打开，都有机会发现之前忽略的细节。收藏它，或者偶尔回来看看，都很好。
+    </p>
+
+    <div class="footer-note">
+        —— 保持温和，保持开放 ——
+    </div>
+
+</div>
+</body>
+</html>
